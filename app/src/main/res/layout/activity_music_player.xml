@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".MusicPlayerActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textSong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="21dp"
+            android:textStyle="italic" />
+
+        <ImageView
+            android:id="@+id/musicPlayerImage"
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:layout_marginBottom="10dp"
+            app:srcCompat="@drawable/music_app_inside" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp">
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="325dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:layout_margin="20dp"
+                android:layout_marginBottom="40dp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/playButton"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/ic_pause"
+                tools:ignore="SpeakableTextPresentCheck">
+            </androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/nextButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/ic_next"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="40dp"
+                android:layout_toRightOf="@id/playButton"
+                tools:ignore="SpeakableTextPresentCheck">
+            </androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/previousButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/ic_previous"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:layout_toLeftOf="@id/playButton"
+                tools:ignore="SpeakableTextPresentCheck">
+            </androidx.appcompat.widget.AppCompatButton>
+
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</LinearLayout>
