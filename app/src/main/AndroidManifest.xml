@@ -20,7 +20,9 @@
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".WelcomeScreen"
-            android:exported="true" >
+            android:screenOrientation="portrait"
+            android:exported="true"
+            tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
