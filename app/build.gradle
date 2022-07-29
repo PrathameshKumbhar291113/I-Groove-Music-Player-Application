@@ -18,6 +18,7 @@ android {
     buildTypes {
         release {
             minifyEnabled false
+            crunchPngs true  // Paste this line
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
