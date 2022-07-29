@@ -1,9 +1,7 @@
 package com.example.igroove;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
@@ -13,16 +11,15 @@ import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;
 import com.karumi.dexter.PermissionToken;
-import com.karumi.dexter.listener.PermissionDeniedResponse;
-import com.karumi.dexter.listener.PermissionGrantedResponse;
 import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
-import com.karumi.dexter.listener.single.PermissionListener;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -114,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public View getView(int i, View convertView, ViewGroup viewGroup) {
-            View view = getLayoutInflater().inflate(R.layout.list_item,null);
+            @SuppressLint("ViewHolder") View view = getLayoutInflater().inflate(R.layout.list_item,null);
             TextView textSongName = view.findViewById(R.id.textSongName);
             textSongName.setSelected(true);
             textSongName.setText(items[i]);
